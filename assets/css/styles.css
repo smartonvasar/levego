@@ -1,0 +1,49 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    color: #526066;
+}
+
+
+/*
+ * -- BANNER --
+ * The top banner with the headings. By using a combination
+ * of `display: table;` and `display: table-cell;`, we can
+ * vertically center the text.
+ */
+
+.banner {
+    background: transparent url('/assets/img/background.png') 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+
+    height: 200px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+}
+
+    .banner-head {
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 0;
+        font-size: 2em;
+        color: white;
+        font-weight: 500;
+        text-shadow: 0 1px 1px black;
+    }
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ * On phones, we want to reduce the height and font-size of the banner further
+ */
+@media (min-width: 480px) {
+    .banner {
+        height: 200px;
+    }
+    .banner-head {
+        font-size: 3em;
+    }
+}

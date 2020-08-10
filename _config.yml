@@ -1,4 +1,13 @@
-title: SMARTonvásár
-description: Szálló por koncenctráció mérőhálózat
-theme: jekyll-theme-minimal
-repository: smartonvasar/levego
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-assets
+  - jekyll-minifier
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
