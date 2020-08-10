@@ -15,7 +15,7 @@ body {
  */
 
 .banner {
-    background: transparent url('/assets/img/background.png') 0 0 no-repeat fixed;
+    background: transparent url('assets/img/background.png') 0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
 
