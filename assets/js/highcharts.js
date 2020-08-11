@@ -1,15 +1,15 @@
-    function loadData(target, titleText, xAxisText, yAxisText, nodeIds, fieldNames, granulation) {
+    function loadData(target, titleText, xAxisText, yAxisText, nodeIds, fieldNames, granulation, legends) {
         return $.ajax({
             type: "GET",
             url: 'https://api.iotguru.cloud/measurement/loadByNodeIds/' + nodeIds + '/' + fieldNames + '/' + granulation,
             dataType: "json",
             success: function (data) {
-                processData(target, titleText, xAxisText, yAxisText, granulation, data);
+                processData(target, titleText, xAxisText, yAxisText, granulation, data, legends);
             }
         });
     }
 
-    function processData(target, titleText, xAxisText, yAxisText, granulation, data) {
+    function processData(target, titleText, xAxisText, yAxisText, granulation, data, legends) {
         var options = {
             time: {
                 timezone: 'Europe/Budapest'
@@ -85,7 +85,8 @@
 
         for (var i = 0; i < data.length; i++) {
             options.series[i] = {data: {}, name: {}};
-            options.series[i].name = data[i]["name"];
+            /* options.series[i].name = data[i]["name"]; */
+            options.series[i].name = legends[i];
             options.series[i].data = data[i]["data"].sort(function (a, b) {
                 return a[0] - b[0];
             });
@@ -114,6 +115,8 @@
         var nodeIdsLocationCompare = 'j6SXje7B1NlWuGxgoFYR6g,lV0lVM0xrQyATqegqlIR6g,vzofJwY5SZredRBAqnkR6g,vzofJwY5SZonGiugqnoR6g,pGG1Q1HEfK76tqKA-xwR6Q';
         var filedNamesAll25 = 'pm25,pm25,pm25,pm25,pm25';
         var filedNamesAll10 = 'pm10,pm10,pm10,pm10,pm10';
+        var displayNamesAll = ['box01', 'box02', 'box03', 'box04', 'vol01'];
+        var displayNames = ['pm10', 'pm25'];
 
         function load() {
             let gran = '';
@@ -130,13 +133,13 @@
                 gran = 'YEAR/366';
             }
 
-            loadData('graphAverage-box-1', 'box01', 'idő', 'μg/m³', nodeIds1, filedNames, gran);
-            loadData('graphAverage-box-2', 'box02', 'idő', 'μg/m³', nodeIds2, filedNames, gran);
-            loadData('graphAverage-box-3', 'box03', 'idő', 'μg/m³', nodeIds3, filedNames, gran);
-            loadData('graphAverage-box-4', 'box04', 'idő', 'μg/m³', nodeIds4, filedNames, gran);
-            loadData('graphAverage-voluntary-01', 'voluntary-01', 'idő', 'μg/m³', nodeIdsVoluntary01, filedNames, gran);
-            loadData('graphAverage-all-25', 'PM25', 'idő', 'μg/m³', nodeIdsLocationCompare, filedNamesAll25, gran);
-            loadData('graphAverage-all-10', 'PM10', 'idő', 'μg/m³', nodeIdsLocationCompare, filedNamesAll10, gran);
+            loadData('graphAverage-box-1', 'box01', 'idő', 'μg/m³', nodeIds1, filedNames, gran, displayNames);
+            loadData('graphAverage-box-2', 'box02', 'idő', 'μg/m³', nodeIds2, filedNames, gran, displayNames);
+            loadData('graphAverage-box-3', 'box03', 'idő', 'μg/m³', nodeIds3, filedNames, gran, displayNames);
+            loadData('graphAverage-box-4', 'box04', 'idő', 'μg/m³', nodeIds4, filedNames, gran, displayNames);
+            loadData('graphAverage-voluntary-01', 'voluntary-01', 'idő', 'μg/m³', nodeIdsVoluntary01, filedNames, gran, displayNames);
+            loadData('graphAverage-all-25', 'PM25', 'idő', 'μg/m³', nodeIdsLocationCompare, filedNamesAll25, gran, displayNamesAll);
+            loadData('graphAverage-all-10', 'PM10', 'idő', 'μg/m³', nodeIdsLocationCompare, filedNamesAll10, gran, displayNamesAll);
 
             setTimeout(function () {
                 load();
