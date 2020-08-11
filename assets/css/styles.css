@@ -1,3 +1,7 @@
+---
+title: CSS stylesheet
+---
+
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
@@ -15,7 +19,7 @@ body {
  */
 
 .banner {
-    background: transparent url('assets/img/background.png') 0 0 no-repeat fixed;
+    background: transparent url("{{ '/assets/img/background.png' | relative_url }} ") 0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
 
