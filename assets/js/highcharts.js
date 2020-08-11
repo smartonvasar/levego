@@ -18,6 +18,7 @@
                 text: titleText
             },
             chart: {
+                zoomType: 'xy',
                 type: 'spline',
                 renderTo: target,
                 events: {
