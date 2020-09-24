@@ -2,6 +2,20 @@
 layout: default
 ---
 <div class="container">
+    <h5 class="center-align">
+        Levegőminőség szenzorokból álló nemzetközi civil mérőhálózat térképe (<a href="https://sensor.community">sensor.community</a>)
+    </h5>
+    
+    <div class="row">
+      <div class="col s12 center-align">
+        <a href="https://martonvasar.maps.sensor.community/#11/47.3159/18.7906">Váltás teljes nagyítható térképre</a>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            {% include map.html %}
+        </div>
+    </div>
     <div class="section">
         <h5 class="center-align">
             PM10 és PM2.5 szálló por koncentráció
@@ -54,14 +68,6 @@ layout: default
     </div>
 
     <div class="divider"></div>
-    <h5 class="center-align">
-        Térkép
-    </h5>
-    <div class="row">
-        <div class="col s12">
-            {% include map.html %}
-        </div>
-    </div>
     
 </div> <!-- end l-content -->
 
