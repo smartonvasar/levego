@@ -121,10 +121,10 @@
         var displayNamesAll = ['box01', 'box02', 'box03', 'box04', 'vol01'];
         var displayNames = ['pm10', 'pm25'];
         */
-        var nodeIdsLocationCompare = 'j6SXje7B1NlWuGxgoFYR6g,pGG1Q1HEfK76tqKA-xwR6Q';
-        var filedNamesAll25 = 'pm25,pm25';
-        var filedNamesAll10 = 'pm10,pm10';
-        var displayNamesAll = ['box01', 'vol01'];
+        var nodeIdsLocationCompare = 'j6SXje7B1NlWuGxgoFYR6g,lV0lVM0xrQyATqegqlIR6g,pGG1Q1HEfK76tqKA-xwR6Q';
+        var filedNamesAll25 = 'pm25,pm25,pm25';
+        var filedNamesAll10 = 'pm10,pm10,pm10';
+        var displayNamesAll = ['box01', 'box02', 'vol01'];
 
         function load() {
             let gran = '';
@@ -142,8 +142,8 @@
             }
 
             loadData('graphAverage-box-1', 'box01', 'idő', 'μg/m³', nodeIds1, filedNames, gran, displayNames);
-            /*
             loadData('graphAverage-box-2', 'box02', 'idő', 'μg/m³', nodeIds2, filedNames, gran, displayNames);
+            /*
             loadData('graphAverage-box-3', 'box03', 'idő', 'μg/m³', nodeIds3, filedNames, gran, displayNames);
             loadData('graphAverage-box-4', 'box04', 'idő', 'μg/m³', nodeIds4, filedNames, gran, displayNames);
             */
