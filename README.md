@@ -16,9 +16,7 @@ https://maps.sensor.community/grafana/d/GUaL5aZMz/pm-sensors?orgId=1&var-chipID=
 ## devel
 
 ```
-docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" --env JEKYLL_ENV=development jekyll/jekyll:3.8 jekyll build --incremental --watch
-
-docker run --rm -v "$PWD/_site:/usr/share/nginx/html:ro" -p 8080:80  nginx
+docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 --env JEKYLL_ENV=development jekyll/jekyll:3.8 jekyll serve --incremental --force_polling
 
 open localhost:8080
 ```

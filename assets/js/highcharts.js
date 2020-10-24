@@ -40,11 +40,24 @@
                 title: {
                     text: yAxisText
                 },
-                plotBands: [{ // Light air
+                plotBands: [
+                    { // health
                     from: 0,
-                    to: 25,
-                    color: 'rgba(0, 200, 0, 0.1)'
-                }]
+                    to: 50,
+                    color: 'rgba(232, 245, 233, 0.9)'
+                },
+                    { // inform
+                        from: 50,
+                        to: 75,
+                        color: 'rgba(255, 253, 231, 0.9)'
+                    },
+
+                    { // alarm
+                        from: 75,
+                        to: 100,
+                        color: 'rgba(255, 235, 238, 0.9)'
+                    }
+                    ]
             },
             tooltip: {
                 xDateFormat: '%Y-%m-%d %H:%M',
@@ -103,9 +116,6 @@
             chart.redraw();
         }
     }
-
-    $(document).ready(function () {
-
         var granularity = 'day';
         var nodeIds1 = 'j6SXje7B1NlWuGxgoFYR6g,j6SXje7B1NlWuGxgoFYR6g';
         var nodeIds2 = 'lV0lVM0xrQyATqegqlIR6g,lV0lVM0xrQyATqegqlIR6g';
@@ -125,6 +135,9 @@
         var filedNamesAll25 = 'pm25,pm25,pm25';
         var filedNamesAll10 = 'pm10,pm10,pm10';
         var displayNamesAll = ['box01', 'box02', 'vol01'];
+
+    $(document).ready(function () {
+
 
         function load() {
             let gran = '';

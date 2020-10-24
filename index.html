@@ -2,14 +2,275 @@
 layout: default
 ---
 <div class="container">
+    <div class="row">
+        <div>
+            A szenzorok nem hitelesített és nem hivatalos mérőpontok. Az itt közzétett adatok miatt nem terhelhet
+            senkit felelősség.
+        </div>
+    </div>
+    <h5 class="center-align">
+        Előző órák átlaga
+    </h5>
+    <div class="row center-align">
+        <div class="col s12 m4">
+            <div class="card indigo lighten-1">
+                <div class="card-content white-text">
+                    <span class="card-title">PM10 T-1h</span>
+                    <h3 class="center-align">
+                            <span id="1h_avg_1" class="value">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        <small>µg/m³</small>
+                    </h3>
+
+                    <p id="1h_avg_1_end" class="no-wrap">end</p>
+                    <p id="1h_avg_1_start" class="no-wrap">start</p>
+                    <p>pontok: <span id="1h_avg_1_points" class="no-wrap">points</span></p>
+                    <p>Elmúlt egy óra átlaga</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card indigo lighten-2">
+                <div class="card-content">
+                    <span class="card-title">PM10 T-2h</span>
+                    <h3 class="center-align">
+                            <span id="1h_avg_2" class="value">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        <small>µg/m³</small>
+                    </h3>
+
+                    <p id="1h_avg_2_end" class="no-wrap">end</p>
+                    <p id="1h_avg_2_start" class="no-wrap">start</p>
+                    <p>pontok: <span id="1h_avg_2_points" class="no-wrap">points</span></p>
+                    <p>Egy órával ezelőtt mért óra átlaga</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card indigo lighten-3">
+                <div class="card-content">
+                    <span class="card-title">PM10 T-3h</span>
+                    <h3 class="center-align">
+                            <span id="1h_avg_3" class="value">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        <small>µg/m³</small>
+                    </h3>
+
+                    <p id="1h_avg_3_end" class="no-wrap">end</p>
+                    <p id="1h_avg_3_start" class="no-wrap">start</p>
+                    <p>pontok: <span id="1h_avg_3_points" class="no-wrap">points</span></p>
+                    <p>Két órával ezelőtt mért óra átlaga</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h5 class="center-align">
+        Előző napok átlaga
+    </h5>
+    <div class="section">
+        <div class="row center-align">
+            <div class="col s12 m4">
+                <div class="card indigo lighten-3">
+                    <div class="card-content">
+                        <span class="card-title">PM10 T-24h</span>
+                        <h3 class="center-align">
+                            <span id="24h_avg_24" class="value">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                            <small>µg/m³</small>
+                        </h3>
+                        <p id="24h_avg_24_end" class="no-wrap"></p>
+                        <p id="24h_avg_24_start" class="no-wrap"></p>
+                        <p>pontok: <span id="24h_avg_24_points" class="no-wrap"></span></p>
+                        <p>Ma mért 24 óra átlaga</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card indigo lighten-4">
+                    <div class="card-content">
+                        <span class="card-title">PM10 T-48h</span>
+                        <h3 class="center-align">
+                            <span id="24h_avg_48" class="value">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                            <small>µg/m³</small>
+                        </h3>
+                        <p id="24h_avg_48_end" class="no-wrap">end</p>
+                        <p id="24h_avg_48_start" class="no-wrap">start</p>
+                        <p>pontok: <span id="24h_avg_48_points" class="no-wrap">points</span></p>
+                        <p>Tegnap mért 24 óra átlaga</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card indigo lighten-5">
+                    <div class="card-content">
+                        <span class="card-title">PM10 T-72h</span>
+                        <h3 class="center-align">
+                            <span id="24h_avg_72" class="value">
+                                <div class="preloader-wrapper small active">
+                                    <div class="spinner-layer spinner-green-only">
+                                        <div class="circle-clipper left">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="gap-patch">
+                                            <div class="circle"></div>
+                                        </div>
+                                        <div class="circle-clipper right">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span> <small>µg/m³</small>
+                        </h3>
+                        <p id="24h_avg_72_end" class="no-wrap">end</p>
+                        <p id="24h_avg_72_start" class="no-wrap">start</p>
+                        <p>pontok: <span id="24h_avg_72_points" class="no-wrap">points</span></p>
+                        <p>Tegnapelőtt mért 24 óra átlaga</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 class="center-align">
+            Határértékek
+        </h5>
+        <h6 class="center-align">
+            Hivatalos és hiteles mérőállomásokkal és rendeletekkel rendelkező önkormányzatoknál a következő szabályok
+            élnek a szálló por koncentráció tekintetében.
+        </h6>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content yellow lighten-3">
+                        <span class="card-title">Egészségügyi határérték</span>
+                    </div>
+                    <div class="card-content">
+                        <p>50 µg/m³</p>
+                        <div class="divider my-1"></div>
+                        <p>
+                            tartós egészségkárosodást nem okoz, és amelyet az emberi egészség védelme érdekében a
+                            jogszabályban meghatározott módon és időn belül be kell tartani. Elérése és túllépése
+                            veszélyes
+                            légszennyezettséget eredményez.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card ">
+                    <div class="card-content red">
+                        <span class="card-title">Tájékoztatási küszöb</span>
+                    </div>
+                    <div class="card-content">
+                        <p>75 µg/m³</p>
+                        <p>két egymást követő napon (T-24h és T-48h)</p>
+                        <div class="divider my-1"></div>
+                        <p>a légszennyezettségnek egyes légszennyező anyagok tekintetében a lakosság egyes érzékeny
+                            (gyermek, időskorú, beteg) csoportjaira megállapított szintje, amelynek túllépése esetén a
+                            lakosságot az illetékes önkormányzatnak tájékoztatni kell. Elérése és túllépése enyhébb
+                            intézkedéseket jelentő, tájékoztatási fokozatú szmog-helyzetet eredményez.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content black white-text">
+                        <span class="card-title">Riasztási küszöb</span>
+                    </div>
+                    <div class="card-content">
+                        <p>100 µg/m³</p>
+                        <p>két egymást követő napon (T-24h és T-48h) és az <a href="https://www.met.hu">OMSZ</a> szerint a
+                            következő napon javulás nem várható</p>
+                        <div class="divider my-1"></div>
+                        <p>
+                            a légszennyezettség azon szintje, amelynek rövid idejű túllépése is veszélyeztetheti az
+                            emberi
+                            egészséget. Elérése és túllépése forgalomkorlátozással járó intézkedéseket jelentő,
+                            riasztási
+                            fokozatú szmoghelyzetet eredményez.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
     <h5 class="center-align">
         Levegőminőség szenzorokból álló nemzetközi civil mérőhálózat térképe (<a href="https://sensor.community">sensor.community</a>)
     </h5>
-    
+
     <div class="row">
-      <div class="col s12 center-align">
-        <a href="https://martonvasar.maps.sensor.community/#11/47.3159/18.7906">Váltás teljes nagyítható térképre</a>
-      </div>
+        <div class="col s12 center-align">
+            <a href="https://martonvasar.maps.sensor.community/#11/47.3159/18.7906">Váltás teljes nagyítható
+                térképre</a>
+        </div>
     </div>
     <div class="row">
         <div class="col s12">
@@ -68,6 +329,6 @@ layout: default
     </div>
 
     <div class="divider"></div>
-    
+
 </div> <!-- end l-content -->
 
