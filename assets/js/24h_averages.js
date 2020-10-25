@@ -1,14 +1,37 @@
 $(document).ready(function () {
     let weeklydata = loadWeeklyData(nodeIdsLocationCompare, filedNamesAll10);
-    weeklydata.always( function(data){
+    weeklydata.always(function (data) {
         calculateAverages(data);
+        calculateChanges('24h_avg_24', '24h_avg_48');
+        calculateChanges('24h_avg_48', '24h_avg_72');
     });
 
     let dailydata = loadDailyData(nodeIdsLocationCompare, filedNamesAll10);
-    dailydata.always( function(data){
+    dailydata.always(function (data) {
         calculateDailyAverages(data);
+        calculateChanges('1h_avg_1', '1h_avg_2');
+        calculateChanges('1h_avg_2', '1h_avg_3');
     });
 });
+
+function calculateChanges(currentId, previousId) {
+    let current = $("#" + currentId).text();
+    let previous = $("#" + previousId).text();
+    let direction;
+    if (current > previous) {
+        direction = '<i class="red-text small material-icons">file_upload</i>';
+    } else if (current < previous) {
+        direction = '<i class="green-text small material-icons">file_download</i>';
+    } else {
+        direction = '<i class="small material-icons">forward</i>';
+    }
+    let percent = Math.abs(Math.round(10000 * (previous - current) / previous))/100 + '%';
+
+    $("#" + currentId + "_direction").html(direction);
+    $("#" + currentId + "_changepercent").text(percent);
+
+    //console.log(currentId, current, previous, percent);
+}
 
 function loadWeeklyData(nodeIds, fieldNames) {
     return $.ajax({
@@ -17,6 +40,7 @@ function loadWeeklyData(nodeIds, fieldNames) {
         dataType: "json"
     });
 }
+
 function loadDailyData(nodeIds, fieldNames) {
     return $.ajax({
         type: "GET",
@@ -68,8 +92,8 @@ function calculateDailyAverages(data) {
                 break;
         }
         $('#1h_avg_' + interval).text(avg.avg);
-        $('#1h_avg_' + interval + '_start').text(moment(avg.start).format("YYYY-MM-DD HH:mm"));
-        $('#1h_avg_' + interval + '_end').text(moment(avg.end).format("YYYY-MM-DD HH:mm"));
+        $('#1h_avg_' + interval + '_start').html(moment(avg.start).format("YYYY-MM-DD HH:mm"));
+        $('#1h_avg_' + interval + '_end').html(moment(avg.end).format("YYYY-MM-DD HH:mm"));
         $('#1h_avg_' + interval + '_points').text(avg.points);
     });
 }
