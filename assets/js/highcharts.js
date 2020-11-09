@@ -121,19 +121,19 @@
         var nodeIds2 = 'lV0lVM0xrQyATqegqlIR6g,lV0lVM0xrQyATqegqlIR6g';
         var nodeIds3 = 'vzofJwY5SZredRBAqnkR6g,vzofJwY5SZredRBAqnkR6g';
         var nodeIds4 = 'vzofJwY5SZonGiugqnoR6g,vzofJwY5SZonGiugqnoR6g';
-        var filedNames = 'pm10,pm25';
+        var fieldNames = 'pm10,pm25';
         var nodeIdsVoluntary01 = 'pGG1Q1HEfK76tqKA-xwR6Q,pGG1Q1HEfK76tqKA-xwR6Q';
         var displayNames = ['pm10', 'pm25'];
         /*
         var nodeIdsLocationCompare = 'j6SXje7B1NlWuGxgoFYR6g,lV0lVM0xrQyATqegqlIR6g,vzofJwY5SZredRBAqnkR6g,vzofJwY5SZonGiugqnoR6g,pGG1Q1HEfK76tqKA-xwR6Q';
-        var filedNamesAll25 = 'pm25,pm25,pm25,pm25,pm25';
-        var filedNamesAll10 = 'pm10,pm10,pm10,pm10,pm10';
+        var fieldNamesAll25 = 'pm25,pm25,pm25,pm25,pm25';
+        var fieldNamesAll10 = 'pm10,pm10,pm10,pm10,pm10';
         var displayNamesAll = ['box01', 'box02', 'box03', 'box04', 'vol01'];
         var displayNames = ['pm10', 'pm25'];
         */
         var nodeIdsLocationCompare = 'j6SXje7B1NlWuGxgoFYR6g,lV0lVM0xrQyATqegqlIR6g,pGG1Q1HEfK76tqKA-xwR6Q';
-        var filedNamesAll25 = 'pm25,pm25,pm25';
-        var filedNamesAll10 = 'pm10,pm10,pm10';
+        var fieldNamesAll25 = 'pm25,pm25,pm25';
+        var fieldNamesAll10 = 'pm10,pm10,pm10';
         var displayNamesAll = ['box01', 'box02', 'vol01'];
 
     $(document).ready(function () {
@@ -154,15 +154,15 @@
                 gran = 'YEAR/366';
             }
 
-            loadData('graphAverage-box-1', 'box01', 'idő', 'μg/m³', nodeIds1, filedNames, gran, displayNames);
-            loadData('graphAverage-box-2', 'box02', 'idő', 'μg/m³', nodeIds2, filedNames, gran, displayNames);
+            loadData('graphAverage-box-1', 'box01', 'idő', 'μg/m³', nodeIds1, fieldNames, gran, displayNames);
+            loadData('graphAverage-box-2', 'box02', 'idő', 'μg/m³', nodeIds2, fieldNames, gran, displayNames);
             /*
-            loadData('graphAverage-box-3', 'box03', 'idő', 'μg/m³', nodeIds3, filedNames, gran, displayNames);
-            loadData('graphAverage-box-4', 'box04', 'idő', 'μg/m³', nodeIds4, filedNames, gran, displayNames);
+            loadData('graphAverage-box-3', 'box03', 'idő', 'μg/m³', nodeIds3, fieldNames, gran, displayNames);
+            loadData('graphAverage-box-4', 'box04', 'idő', 'μg/m³', nodeIds4, fieldNames, gran, displayNames);
             */
-            loadData('graphAverage-voluntary-01', 'voluntary-01', 'idő', 'μg/m³', nodeIdsVoluntary01, filedNames, gran, displayNames);
-            loadData('graphAverage-all-25', 'PM25', 'idő', 'μg/m³', nodeIdsLocationCompare, filedNamesAll25, gran, displayNamesAll);
-            loadData('graphAverage-all-10', 'PM10', 'idő', 'μg/m³', nodeIdsLocationCompare, filedNamesAll10, gran, displayNamesAll);
+            loadData('graphAverage-voluntary-01', 'voluntary-01', 'idő', 'μg/m³', nodeIdsVoluntary01, fieldNames, gran, displayNames);
+            loadData('graphAverage-all-25', 'PM25', 'idő', 'μg/m³', nodeIdsLocationCompare, fieldNamesAll25, gran, displayNamesAll);
+            loadData('graphAverage-all-10', 'PM10', 'idő', 'μg/m³', nodeIdsLocationCompare, fieldNamesAll10, gran, displayNamesAll);
 
             setTimeout(function () {
                 load();

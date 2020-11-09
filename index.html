@@ -13,224 +13,703 @@ layout: default
     </h5>
     <div class="row center-align">
         <div class="col s12 m4">
-            <div class="card indigo small lighten-1">
-                <div class="card-content white-text">
-                    <span class="card-title">PM10 T-1h</span>
-                    <h3>
-                            <span id="1h_avg_1" class="value">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-1h</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_1h_avg_1" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </span>
-                        <small>µg/m³</small>
-                    </h3>
-                    <div>
-                        <span id="1h_avg_1_direction">
-                            <div class="progress">
-                                <div class="indeterminate"></div>
+                                </h5>
                             </div>
-                        </span>
-                        <span id="1h_avg_1_changepercent"></span>
-                    </div>
-                    <p id="1h_avg_1_end" class="no-wrap">
-                    </p>
-                    <p id="1h_avg_1_start" class="no-wrap">
-                    </p>
-                    <p>pontok: <span id="1h_avg_1_points" class="no-wrap"></span></p>
-                    <p>Elmúlt egy óra átlaga</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="card indigo small lighten-2">
-                <div class="card-content white-text">
-                    <span class="card-title">PM10 T-2h</span>
-                    <h3>
-                            <span id="1h_avg_2" class="value">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="1h_avg_1" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </span>
-                        <small>µg/m³</small>
-                    </h3>
-                    <div>
-                        <span id="1h_avg_2_direction">
-                            <div class="progress">
-                                <div class="indeterminate"></div>
+                                </h5>
                             </div>
-                        </span>
-                        <span id="1h_avg_2_changepercent"></span>
+                        </div>
                     </div>
-                    <p id="1h_avg_2_end" class="no-wrap"></p>
-                    <p id="1h_avg_2_start" class="no-wrap"></p>
-                    <p>pontok: <span id="1h_avg_2_points" class="no-wrap">points</span></p>
-                    <p>Egy órával ezelőtt mért óra átlaga</p>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                                <span id="pm25_1h_avg_1_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="pm25_1h_avg_1_changepercent"></span>
+                            </div>
+                            <div>
+                            <span id="pm25_1h_avg_1_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_1h_avg_1_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_1h_avg_1_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <div>
+                                <span id="1h_avg_1_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="1h_avg_1_changepercent"></span>
+                            </div>
+                            <span id="1h_avg_1_end" class="no-wrap">
+                            </span> -
+                            <span id="1h_avg_1_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="1h_avg_1_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Elmúlt egy óra átlaga</div>
                 </div>
             </div>
         </div>
         <div class="col s12 m4">
             <div class="card indigo small lighten-3">
-                <div class="card-content white-text">
-                    <span class="card-title">PM10 T-3h</span>
-                    <h3>
-                            <span id="1h_avg_3" class="value">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
+                <div class="card-content">
+                    <span class="card-title">T-2h</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_1h_avg_2" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="1h_avg_2" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                                <span id="pm25_1h_avg_2_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="pm25_1h_avg_2_changepercent"></span>
+                            </div>
+                            <div>
+                            <span id="pm25_1h_avg_2_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_1h_avg_2_start" class="no-wrap">
                             </span>
-                        <small>µg/m³</small>
-                    </h3>
-                    <p id="1h_avg_3_end" class="no-wrap">end</p>
-                    <p id="1h_avg_3_start" class="no-wrap">start</p>
-                    <p>pontok: <span id="1h_avg_3_points" class="no-wrap">points</span></p>
-                    <p>Két órával ezelőtt mért óra átlaga</p>
+                            </div>
+                            <p>pontok: <span id="pm25_1h_avg_2_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <div>
+                                <span id="1h_avg_2_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="1h_avg_2_changepercent"></span>
+                            </div>
+                            <span id="1h_avg_2_end" class="no-wrap">
+                            </span> -
+                            <span id="1h_avg_2_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="1h_avg_2_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Egy órával ezelőtt mért óra átlaga</div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-3h</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_1h_avg_3" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="1h_avg_3" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                            <span id="pm25_1h_avg_3_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_1h_avg_3_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_1h_avg_3_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <span id="1h_avg_3_end" class="no-wrap">
+                            </span> -
+                            <span id="1h_avg_3_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="1h_avg_3_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Két órával ezelőtt mért óra átlaga</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="center-align">
+        Előző 24 órák mozgóátlaga
+    </h5>
+    <div class="row center-align">
+        <div class="col s12 m4">
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-24h</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_24h_avg_24" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="24h_avg_24" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                                <span id="pm25_24h_avg_24_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="pm25_24h_avg_24_changepercent"></span>
+                            </div>
+                            <div>
+                            <span id="pm25_24h_avg_24_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_24h_avg_24_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_24h_avg_24_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <div>
+                                <span id="24h_avg_24_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="24h_avg_24_changepercent"></span>
+                            </div>
+                            <span id="24h_avg_24_end" class="no-wrap">
+                            </span> -
+                            <span id="24h_avg_24_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="24h_avg_24_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Ma mért 24 óra átlaga</div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-48h</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_24h_avg_48" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="24h_avg_48" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                                <span id="pm25_24h_avg_48_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="pm25_24h_avg_48_changepercent"></span>
+                            </div>
+                            <div>
+                            <span id="pm25_24h_avg_48_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_24h_avg_48_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_24h_avg_48_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <div>
+                                <span id="24h_avg_48_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="24h_avg_48_changepercent"></span>
+                            </div>
+                            <span id="24h_avg_48_end" class="no-wrap">
+                            </span> -
+                            <span id="24h_avg_48_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="24h_avg_48_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Tegnap mért 24 óra átlaga</div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-72h</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_24h_avg_72" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="24h_avg_72" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                            <span id="pm25_24h_avg_72_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_24h_avg_72_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_24h_avg_72_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <span id="24h_avg_72_end" class="no-wrap">
+                            </span> -
+                            <span id="24h_avg_72_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="24h_avg_72_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Tegnapelőtt mért 24 óra átlaga</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="center-align">
+        Előző teljes napok átlaga
+    </h5>
+    <div class="row center-align">
+        <div class="col s12 m4">
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-1d</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_24h_avg_yesterday" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="24h_avg_yesterday" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                                <span id="pm25_24h_avg_yesterday_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="pm25_24h_avg_yesterday_changepercent"></span>
+                            </div>
+                            <div>
+                            <span id="pm25_24h_avg_yesterday_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_24h_avg_yesterday_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_24h_avg_yesterday_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <div>
+                                <span id="24h_avg_yesterday_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="24h_avg_yesterday_changepercent"></span>
+                            </div>
+                            <span id="24h_avg_yesterday_end" class="no-wrap">
+                            </span> -
+                            <span id="24h_avg_yesterday_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="24h_avg_yesterday_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Tegnapi napon mért mennyiségek átlaga</div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-2d</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_24h_avg_two_days_ago" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="24h_avg_two_days_ago" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                                <span id="pm25_24h_avg_two_days_ago_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="pm25_24h_avg_two_days_ago_changepercent"></span>
+                            </div>
+                            <div>
+                            <span id="pm25_24h_avg_two_days_ago_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_24h_avg_two_days_ago_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_24h_avg_two_days_ago_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <div>
+                                <span id="24h_avg_two_days_ago_direction">
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </span>
+                                <span id="24h_avg_two_days_ago_changepercent"></span>
+                            </div>
+                            <span id="24h_avg_two_days_ago_end" class="no-wrap">
+                            </span> -
+                            <span id="24h_avg_two_days_ago_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="24h_avg_two_days_ago_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Tegnapelőtt mért mennyiségek átlaga</div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="card indigo small lighten-3">
+                <div class="card-content">
+                    <span class="card-title">T-3d</span>
+                    <div>
+                        <div class="row center-align">
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM25</p>
+                                <h5 id="pm25_24h_avg_three_days_ago" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                            <div class="col s1"></div>
+                            <div class="col s1"></div>
+                            <div class="col s4">
+                                <p>PM10</p>
+                                <h5 id="24h_avg_three_days_ago" class="value">
+                                    <div class="preloader-wrapper small active">
+                                        <div class="spinner-layer spinner-green-only">
+                                            <div class="circle-clipper right">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>µg/m³</div>
+
+                    <div class="row center-align">
+                        <div class="col s6">
+                            <div>
+                            <span id="pm25_24h_avg_three_days_ago_end" class="no-wrap">
+                            </span> -
+                                <span id="pm25_24h_avg_three_days_ago_start" class="no-wrap">
+                            </span>
+                            </div>
+                            <p>pontok: <span id="pm25_24h_avg_three_days_ago_points" class="no-wrap"></span></p>
+                        </div>
+                        <div class="col s6">
+                            <span id="24h_avg_three_days_ago_end" class="no-wrap">
+                            </span> -
+                            <span id="24h_avg_three_days_ago_start" class="no-wrap">
+                            </span>
+                            <p>pontok: <span id="24h_avg_three_days_ago_points" class="no-wrap"></span></p>
+                        </div>
+                    </div>
+                    <div>Három nappal ezelőtt mért mennyiségek átlaga</div>
                 </div>
             </div>
         </div>
     </div>
 
 
+    <div class="divider"></div>
     <h5 class="center-align">
-        Előző napok mozgóátlaga
+        Határértékek
     </h5>
     <div class="section">
-        <div class="row center-align">
-            <div class="col s12 m4">
-                <div class="card indigo small lighten-3">
-                    <div class="card-content">
-                        <span class="card-title">PM10 T-24h</span>
-                        <h3>
-                            <span id="24h_avg_24" class="value">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </span>
-                            <small>µg/m³</small>
-                        </h3>
-                        <div>
-                            <span id="24h_avg_24_direction">
-                                <div class="progress">
-                                    <div class="indeterminate"></div>
-                                </div>
-                            </span>
-                            <span id="24h_avg_24_changepercent"></span>
-                        </div>
-                        <p id="24h_avg_24_end" class="no-wrap"></p>
-                        <p id="24h_avg_24_start" class="no-wrap"></p>
-                        <p>pontok: <span id="24h_avg_24_points" class="no-wrap"></span></p>
-                        <p>Ma mért 24 óra átlaga</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4">
-                <div class="card indigo small lighten-4">
-                    <div class="card-content">
-                        <span class="card-title">PM10 T-48h</span>
-                        <h3>
-                            <span id="24h_avg_48" class="value">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </span>
-                            <small>µg/m³</small>
-                        </h3>
-                        <div>
-                            <span id="24h_avg_48_direction">
-                                <div class="progress">
-                                    <div class="indeterminate"></div>
-                                </div>
-                            </span>
-                            <span id="24h_avg_48_changepercent"></span>
-                        </div>
-                        <p id="24h_avg_48_end" class="no-wrap"></p>
-                        <p id="24h_avg_48_start" class="no-wrap"></p>
-                        <p>pontok: <span id="24h_avg_48_points" class="no-wrap">points</span></p>
-                        <p>Tegnap mért 24 óra átlaga</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4">
-                <div class="card indigo small lighten-5">
-                    <div class="card-content">
-                        <span class="card-title">PM10 T-72h</span>
-                        <h3>
-                            <span id="24h_avg_72" class="value">
-                                <div class="preloader-wrapper small active">
-                                    <div class="spinner-layer spinner-green-only">
-                                        <div class="circle-clipper left">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="gap-patch">
-                                            <div class="circle"></div>
-                                        </div>
-                                        <div class="circle-clipper right">
-                                            <div class="circle"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </span> <small>µg/m³</small>
-                        </h3>
-                        <p id="24h_avg_72_end" class="no-wrap">end</p>
-                        <p id="24h_avg_72_start" class="no-wrap">start</p>
-                        <p>pontok: <span id="24h_avg_72_points" class="no-wrap">points</span></p>
-                        <p>Tegnapelőtt mért 24 óra átlaga</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h5 class="center-align">
-            Határértékek
-        </h5>
+        <p>
+            <a href="https://www.nnk.gov.hu/index.php/kozegeszsegugyi-laboratoriumi-foosztaly/terkepes-informaciok/levegohigienes-index/694-a-levegohigienes-index-ismertetese">*
+                A táblázat forrása a Nemzeti Népegészségügyi Központ honlapján</a></p>
+        <table class="responsive-table">
+            <tr>
+                <td>Levegőhigiénés Index kategóriái</td>
+                <td>Légszennyezők koncentrációja (μg/m3)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>PM2.5
+                    (24 óra)
+                </td>
+                <td>PM10
+                    (24 óra)
+                </td>
+            </tr>
+            <tr class="green accent-1">
+                <td>elfogadható</td>
+                <td><25</td>
+                <td><50</td>
+            </tr>
+            <tr class="yellow accent-1">
+                <td>kifogásolt</td>
+                <td>25 - 37,5</td>
+                <td>50 - 75</td>
+            </tr>
+            <tr class="orange accent-1">
+                <td>egészségtelen</td>
+                <td>37,5 - 50</td>
+                <td>75 - 100</td>
+            </tr>
+            <tr class="red accent-1">
+                <td>veszélyes</td>
+                <td>≥50</td>
+                <td>≥100</td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="section">
         <h6 class="center-align">
             Hivatalos és hiteles mérőállomásokkal és rendeletekkel rendelkező önkormányzatoknál a következő szabályok
             élnek a szálló por koncentráció tekintetében.
@@ -294,6 +773,7 @@ layout: default
         </div>
     </div>
     <div class="divider"></div>
+
     <h5 class="center-align">
         Levegőminőség szenzorokból álló nemzetközi civil mérőhálózat térképe (<a href="https://sensor.community">sensor.community</a>)
     </h5>

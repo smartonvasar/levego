@@ -10,6 +10,14 @@ body {
     color: #526066;
 }
 
+.ml-1 {
+    margin-left: 0.5em;
+}
+
+.mr-1 {
+    margin-right: 0.5em;
+}
+
 .my-1 {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
