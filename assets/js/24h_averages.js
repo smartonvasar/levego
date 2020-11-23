@@ -152,15 +152,13 @@ function calculateAverages(data, dimension) {
             $('#24h_avg_' + interval).closest('.col').addClass(indexClassMap[index]);
 
             $('#24h_avg_' + interval).html(avg.avg);
-            $('#24h_avg_' + interval + '_start').html(moment(avg.start).format("YYYY-MM-DD HH:mm"));
-            $('#24h_avg_' + interval + '_end').html(moment(avg.end).format("YYYY-MM-DD HH:mm"));
             $('#24h_avg_' + interval + '_points').text(avg.points);
         } else if (dimension == "pm25") {
             $('#pm25_24h_avg_' + interval).closest('.col').addClass(indexClassMap[index]);
 
             $('#pm25_24h_avg_' + interval).html(avg.avg);
-            $('#pm25_24h_avg_' + interval + '_start').html(moment(avg.start).format("YYYY-MM-DD HH:mm"));
-            $('#pm25_24h_avg_' + interval + '_end').html(moment(avg.end).format("YYYY-MM-DD HH:mm"));
+            $('#pm25_24h_avg_' + interval + '_start').html(moment(avg.start).format("MM-DD HH:mm"));
+            $('#pm25_24h_avg_' + interval + '_end').html(moment(avg.end).format("MM-DD HH:mm"));
             $('#pm25_24h_avg_' + interval + '_points').text(avg.points);
         }
     });
@@ -203,8 +201,6 @@ function calculateDailyAverages(data, dimension) {
             $('#1h_avg_' + interval).closest('.col').addClass(indexClassMap[index]);
 
             $('#1h_avg_' + interval).html(avg.avg);
-            $('#1h_avg_' + interval + '_start').html(moment(avg.start).format("HH:mm"));
-            $('#1h_avg_' + interval + '_end').html(moment(avg.end).format("HH:mm"));
             $('#1h_avg_' + interval + '_points').text(avg.points);
         } else if (dimension == "pm25") {
             $('#pm25_1h_avg_' + interval).closest('.col').addClass(indexClassMap[index]);
