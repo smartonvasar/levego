@@ -104,7 +104,7 @@ var granularity = 'day';
 var nodeIds1 = 'j6SXje7B1NlWuGxgoFYR6g,j6SXje7B1NlWuGxgoFYR6g';
 var nodeIds2 = 'lV0lVM0xrQyATqegqlIR6g,lV0lVM0xrQyATqegqlIR6g';
 var nodeIds3 = 'vzofJwY5SZredRBAqnkR6g,vzofJwY5SZredRBAqnkR6g';
-var nodeIds4 = 'vzofJwY5SZonGiugqnoR6g,vzofJwY5SZonGiugqnoR6g';
+var nodeIds4 = 'sT_PXamLzVwHT1fwQTMR6w,sT_PXamLzVwHT1fwQTMR6w';
 var fieldNames = 'pm10,pm25';
 var nodeIdsVoluntary01 = 'pGG1Q1HEfK76tqKA-xwR6Q,pGG1Q1HEfK76tqKA-xwR6Q';
 var displayNames = ['pm10', 'pm25'];
@@ -115,10 +115,10 @@ var fieldNamesAll10 = 'pm10,pm10,pm10,pm10,pm10';
 var displayNamesAll = ['box01', 'box02', 'box03', 'box04', 'vol01'];
 var displayNames = ['pm10', 'pm25'];
 */
-var nodeIdsLocationCompare = 'j6SXje7B1NlWuGxgoFYR6g,lV0lVM0xrQyATqegqlIR6g,pGG1Q1HEfK76tqKA-xwR6Q';
-var fieldNamesAll25 = 'pm25,pm25,pm25';
-var fieldNamesAll10 = 'pm10,pm10,pm10';
-var displayNamesAll = ['box01', 'box02', 'vol01'];
+var nodeIdsLocationCompare = 'j6SXje7B1NlWuGxgoFYR6g,lV0lVM0xrQyATqegqlIR6g,sT_PXamLzVwHT1fwQTMR6w,pGG1Q1HEfK76tqKA-xwR6Q';
+var fieldNamesAll25 = 'pm25,pm25,pm25,pm25';
+var fieldNamesAll10 = 'pm10,pm10,pm10,pm10';
+var displayNamesAll = ['box01', 'box02', 'box04', 'vol01'];
 
 let plotBands = [];
 
@@ -189,6 +189,7 @@ $(document).ready(function () {
 
         loadData('graphAverage-box-1', 'box01', 'idő', 'μg/m³', nodeIds1, fieldNames, gran, displayNames, plotBands);
         loadData('graphAverage-box-2', 'box02', 'idő', 'μg/m³', nodeIds2, fieldNames, gran, displayNames, plotBands);
+        loadData('graphAverage-box-4', 'box04', 'idő', 'μg/m³', nodeIds4, fieldNames, gran, displayNames, plotBands);
         loadData('graphAverage-voluntary-01', 'voluntary-01', 'idő', 'μg/m³', nodeIdsVoluntary01, fieldNames, gran, displayNames, plotBands);
 
         /*
